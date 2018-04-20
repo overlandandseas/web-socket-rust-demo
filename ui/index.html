@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Sockets Demo</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+  </head>
+  <body class="sans-serif">
+    <div class="pa4">
+      <h1>Web Sockets Demo</h1>
+
+      <input type="text" placeholder="Message to send to web socket" class="pa1 w5 h2 mr4"/>
+      <a class="f6 link dim br-pill ph3 pv2 dib white bg-mid-gray" href="#0">Send to server</a>
+
+    </div>
+    <div class="pa4">
+      <h2>Content</h2>
+      <ul class="list">
+      </ul>
+    </div>
+    <script type="module" src="/ws.js"></script>
+  </body>
+</html>

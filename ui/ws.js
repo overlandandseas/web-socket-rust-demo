@@ -1,0 +1,31 @@
+// ws.js
+const ws = new WebSocket("ws://localhost:3012");
+const contentList = document.getElementsByTagName("ul")[0];
+const inpt = document.getElementsByTagName("input")[0];
+
+ws.onopen = attachtEventListener;
+ws.onmessage = logAndWrite;
+
+inpt.addEventListener(
+  "keydown",
+  evt => evt.keyCode === 13 && ws.send(inpt.value)
+);
+
+function logAndWrite(event) {
+  console.log("server:", event.data);
+  writeNewMessage(event.data);
+}
+
+function writeNewMessage(message) {
+  const li = document.createElement("li");
+  li.innerHTML = message;
+  contentList.appendChild(li);
+}
+
+function attachtEventListener() {
+  document.getElementsByTagName("a")[0].addEventListener("click", evt => {
+    evt.preventDefault();
+    ws.send(inpt.value);
+  });
+  console.log("connection established");
+}
