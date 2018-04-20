@@ -1,5 +1,6 @@
 // web socket server
 extern crate ws;
+extern create env_logger;
 
 use ws::{listen, CloseCode, Message, Sender, Handler, Result};
 
@@ -23,6 +24,7 @@ impl Handler for Server {
 
 fn main() {
 
+    env_logger::init();
 
     listen("localhost:3012", |out| {
         Server {

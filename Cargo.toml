@@ -3,6 +3,9 @@ name = "web-sockets-modules"
 version = "0.1.0"
 authors = ["loverlan <loverland@linkedin.com>"]
 
+[dependencies]
+env_logger = "0.5.8"
+
 [dependencies.ws]
 version = "0.7.6"
 features = ["ssl"]
