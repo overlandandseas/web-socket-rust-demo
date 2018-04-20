@@ -1,5 +1,5 @@
 // ws.js
-const ws = new WebSocket("ws://localhost:3012");
+const ws = new WebSocket("wss://localhost:3012");
 const contentList = document.getElementsByTagName("ul")[0];
 const inpt = document.getElementsByTagName("input")[0];
 

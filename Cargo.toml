@@ -3,5 +3,6 @@ name = "web-sockets-modules"
 version = "0.1.0"
 authors = ["loverlan <loverland@linkedin.com>"]
 
-[dependencies]
-ws = "0.7.6"
+[dependencies.ws]
+version = "0.7.6"
+features = ["ssl"]
