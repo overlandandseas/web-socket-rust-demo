@@ -1,6 +1,6 @@
 // web socket server
 extern crate ws;
-extern create env_logger;
+extern crate env_logger;
 
 use ws::{listen, CloseCode, Message, Sender, Handler, Result};
 
