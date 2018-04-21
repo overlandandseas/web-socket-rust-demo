@@ -1,5 +1,5 @@
 // ws.js
-const ws = new WebSocket("wss://localhost:3012");
+const ws = new WebSocket("wss://rust-websockets.herokuapp.com:3012");
 const contentList = document.getElementsByTagName("ul")[0];
 const inpt = document.getElementsByTagName("input")[0];
 
